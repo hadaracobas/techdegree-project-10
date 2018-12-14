@@ -1,0 +1,25 @@
+// =========================================
+//  Typography
+// =========================================
+
+h1 {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 30px;
+}
+
+p {
+  color: gray;
+  font-size: 15px;
+}
+
+.employee-name {
+  margin-bottom: -5px;
+}
+
+.employee-email {
+  @include mq(medium) {
+    font-size: 15px;
+  }
+
+}

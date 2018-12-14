@@ -1,0 +1,126 @@
+// =========================================
+//  Layout
+// =========================================
+
+.employee-number,
+.employee-address,
+.employee-birthday,
+{
+  display: none;
+}
+
+.employee-ul {
+  @include mq(large) {
+    margin-right: 18px;
+  }
+}
+
+.employee-li {
+  width: 85%;
+  @include mq(medium) {
+    width: 45%;
+    float: left;
+    margin-left: 10px;
+  }
+  @include mq(large) {
+    width: 32%;
+
+  }
+
+}
+
+.employee-container {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+
+}
+
+.employee-data {
+  border: 1px solid lightgray;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  @include mq(medium) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+  @include mq(large) {
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.employee-data:hover {
+  transform: scale(1.1);
+}
+
+.employee-text {
+  @include mq(medium) {
+    text-align: left;
+  }
+}
+
+
+
+#popup-content {
+  position: relative;
+  width: 320px;
+  height: 460px;
+  text-align: center;
+  @include mq(medium) {
+    width: 340px;
+    height:470px;
+  }
+  @include mq(large) {
+    width: 380px;
+  //  height:470px ;
+  }
+  p {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  img {
+    margin: 0 auto;
+  }
+
+  .employee-li {
+    list-style: none;
+    position: absolute;
+    left: 5%;
+    width: 100%;
+    margin-top: 20px;
+
+    @include mq(medium) {
+      left: 5%;
+    }
+    @include mq(large) {
+      left: 3%;
+    }
+
+  }
+  .employee-data {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    border: none;
+  }
+  .employee-data:hover {
+    transform: none;
+  }
+  .employee-container {
+    width: 90%;
+
+  }
+  .employee-city {
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 36px;
+    padding-bottom: 20px;
+  }
+}

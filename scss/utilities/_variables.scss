@@ -1,0 +1,43 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Colors
+$white:             white;
+$black:             black;
+$color-primary:     #027BCE;
+$color-secondary:   #FF1654;
+$color-text:        #2A2B2A;
+$color-text--light: lighten($color-text, 28%);
+$color-text--dark:  darken($color-text, 28%);
+
+
+
+
+
+
+
+//  Text / Font size
+$base__font-size:     19px;
+$base__line-height:   28px;
+$base__letter-space:  .8px;
+
+
+// Font Weights
+$font-weight--thin:   100;
+$font-weight--light:  250;
+$font-weight--normal: 400;
+$font-weight--bold:   750;
+$font-weight--xbold:  950;
+
+
+// Font Stacks
+$font-url--google:       "https://fonts.googleapis.com/css?family=Montserrat";
+$font-family--primary:   'Montserrat', sans-serif;
+$font-family--secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+// Breakpoints
+$brkpoint-sm: 1px;
+$brkpoint-md: 768px;
+$brkpoint-lg: 1024px;

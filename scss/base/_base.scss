@@ -1,0 +1,23 @@
+
+// =========================================
+// Base
+// =========================================
+
+*{
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

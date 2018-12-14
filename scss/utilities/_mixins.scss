@@ -1,0 +1,77 @@
+// =========================================
+//  Mixins
+// =========================================
+
+// Media Queries
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "This is not a valid breakpoint. Please choose between 'small', 'medium', 'large' ";
+  }
+};
+
+
+// BEM selectors
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+};
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+};
+
+
+// Flexbox
+@mixin flex($disp: flex, $dir: null, $wrap: null, $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+
+// Grid
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1) );
+
+    &--#{$i} {
+      width: percentage($target / $context);
+      display: flex;
+    }
+  }
+};
+
+
+
+
+
+// Grid colors
+@mixin grid-color() {
+  @each $theme, $color in $grid-colors {
+    &--#{$theme}.theme__colors {
+      background-color: $color;
+      border-radius: $border-radius;
+      padding: em(14px);
+    }
+  }
+};
